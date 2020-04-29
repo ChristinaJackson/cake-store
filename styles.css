@@ -4,3 +4,13 @@
     padding:0;
     box-sizing:border-box;
 }
+
+
+/* color options */
+body{
+color: #EAEEF4;
+color: #8EC1C5;
+color: #93C572;
+color: #E3E5B3;
+color: #DF5E74;
+}
