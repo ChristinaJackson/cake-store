@@ -5,12 +5,44 @@
     box-sizing:border-box;
 }
 
-
 /* color options for website */
-body{
-color: #EAEEF4;
+/* color: #EAEEF4; 
 color: #8EC1C5;
 color: #93C572;
 color: #E3E5B3;
-color: #DF5E74;
+color: #DF5E74; */
+body{
+font-family: helvetica;
+background-color:#EAEEF4 ;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1rem;
+    padding-top: 30px;
+}
+
+.itemImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px 20px 0 0;
+
+}
+
+.itemName {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: #8EC1C5;
+    background-color: white;
+    border-radius:  0 0 20px 20px;
 }
