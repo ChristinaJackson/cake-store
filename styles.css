@@ -23,6 +23,7 @@ main {
 nav {
   background: var(--mainGrey);
   font-size: 1.5rem;
+  padding: 1rem;
 }
 
 #logo {
