@@ -1,16 +1,87 @@
-/* global reset */
-*{
-    margin: 0;
-    padding:0;
-    box-sizing:border-box;
+/* --------------- Variables ---------------- */
+:root {
+  --primaryColor: #E3E5B3;
+  --mainGrey: #EAEEF4;
+  --mainBlue: #8EC1C5;
+  --mainGreen: #93C572;
+  --mainRed: #DF5E74;
 }
 
+/* --------------- Main styles ---------------- */
+body {
+  font-family: 'Cormorant SC', 'Lucida Sans', 'Verdana', serif;
+}
+
+main {
+
+}
+
+/* --------------- Navbar ---------------- */
+nav {
+  background: var(--mainGrey);
+  font-size: 1.5rem;
+}
+
+#logo {
+  height: 5rem;
+  width: 8rem;
+}
+
+a {
+  color: var(--mainGreen);
+  text-decoration: none;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.nav-icon:hover, a:hover {
+  color: var(--mainRed);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  margin: auto;
+}
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+  color: var(--mainGreen)
+}
+
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 50%;
+  color: var(--mainRed);
+  font-size: 1.1rem;
+}
+/* --------------- End of Navbar ---------------- */
+
+/* --------------- media queries ----------------- */
+@media screen and (min-width: 768px) {
+  
+}
+
+/* --------------- End of media queries ----------------- */
 
 /* color options for website */
-body{
-color: #EAEEF4;
-color: #8EC1C5;
-color: #93C572;
-color: #E3E5B3;
-color: #DF5E74;
-}
+/* body {
+  color: #EAEEF4;
+  color: #8EC1C5;
+  color: #93C572;
+  color: #E3E5B3;
+  color: #DF5E74;
+} */
