@@ -1,19 +1,22 @@
 /* --------------- Variables ---------------- */
 :root {
-  --primaryColor: #E3E5B3;
-  --mainGrey: #EAEEF4;
-  --mainBlue: #8EC1C5;
-  --mainGreen: #93C572;
-  --mainRed: #DF5E74;
+  --primaryColor: #e3e5b3;
+  --mainGrey: #eaeef4;
+  --mainBlue: #8ec1c5;
+  --mainGreen: #93c572;
+  --mainRed: #df5e74;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* --------------- Main styles ---------------- */
 body {
-  font-family: 'Cormorant SC', 'Lucida Sans', 'Verdana', serif;
+  font-family: "Cormorant SC", "Lucida Sans", "Verdana", serif;
 }
 
 main {
-
 }
 
 /* --------------- Navbar ---------------- */
@@ -36,8 +39,40 @@ a {
   font-size: 1.5rem;
 }
 
-.nav-icon:hover, a:hover {
+.nav-icon:hover,
+a:hover {
   color: var(--mainRed);
+}
+
+.cards {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  padding-top: 30px;
+}
+
+.itemImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.itemName {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+  color: black;
+  background-color: var(--mainGrey);
+  border-radius: 0 0 20px 20px;
 }
 
 nav ul {
@@ -55,7 +90,7 @@ nav li {
 .cart-btn {
   position: relative;
   cursor: pointer;
-  color: var(--mainGreen)
+  color: var(--mainGreen);
 }
 
 .cart-items {
@@ -72,16 +107,6 @@ nav li {
 
 /* --------------- media queries ----------------- */
 @media screen and (min-width: 768px) {
-  
 }
 
 /* --------------- End of media queries ----------------- */
-
-/* color options for website */
-/* body {
-  color: #EAEEF4;
-  color: #8EC1C5;
-  color: #93C572;
-  color: #E3E5B3;
-  color: #DF5E74;
-} */
