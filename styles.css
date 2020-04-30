@@ -46,6 +46,8 @@ a:hover {
 }
 
 .cards {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   margin: 0 auto;
   max-width: 1000px;
   display: grid;
@@ -66,10 +68,7 @@ a:hover {
 .itemName {
   display: flex;
   justify-content: space-between;
-  line-height: 1.5;
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
+  font-size: 1rem;
   padding: 1rem;
   color: black;
   background-color: var(--mainGrey);
