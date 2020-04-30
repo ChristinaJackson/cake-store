@@ -146,6 +146,16 @@ footer{
 
 /* --------------- media queries ----------------- */
 @media screen and (min-width: 768px) {
+
+}
+@media only screen and (max-width: 600px) {
+  .footer-topLine{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    margin: 2rem;
+}
 }
 
 /* --------------- End of media queries ----------------- */
