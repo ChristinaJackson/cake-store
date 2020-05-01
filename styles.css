@@ -48,7 +48,6 @@ a:hover {
 .cards {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  margin: 0 auto;
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
