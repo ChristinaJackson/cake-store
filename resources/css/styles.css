@@ -46,7 +46,7 @@ a:hover {
 }
 
 .cards {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin: 2rem auto;
   max-width: 1000px;
@@ -102,9 +102,63 @@ nav li {
   color: var(--mainRed);
   font-size: 1.1rem;
 }
+
+/* --------------- Hamburger menu ---------------- */
+.fas.fa-bars {
+  color: var(--mainGreen);
+}
+
+/* wrapper */
+#hamnav {
+  width: 100%;
+  top: 0;
+}
+
+/* Hide Hamburger */
+#hamnav label, #hamburger {
+  display: none;
+}
+
+/* Horizontal menu items */
+#hamitems {
+  display: flex;
+}
+
+#hamitems li a {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Show hamburger icon */
+  #hamnav label {
+    display: inline-block;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems li a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--mainGreen);
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems, .cart-btn, #logo {
+    display: none;
+  }
+
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+}
+
+/* --------------- End of Hamburger menu ---------------- */
 /* --------------- End of Navbar ---------------- */
 /* --------------- Start of Footer ---------------- */
-footer{
+footer {
   padding: 1rem 1rem 0 1rem;
   background-color: var(--mainGreen);
   color: black;
@@ -117,44 +171,39 @@ footer{
   display: flex;
   justify-content: center;
 }
-.footer-nav li:not(:first-child){
-  border-left:1px solid #000;
+.footer-nav li:not(:first-child) {
+  border-left: 1px solid #000;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
 }
 
-.social-icons{
+.social-icons {
   display: inline-flex;
   justify-content: space-around;
 }
 .social-icons i {
   margin: 0.5rem;
 }
-.footer-topLine{
+.footer-topLine {
   width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.copyright{
+.copyright {
   font-size: 0.7rem;
 }
 /* --------------- End of Footer ---------------- */
 
-
-
 /* --------------- media queries ----------------- */
-@media screen and (min-width: 768px) {
-
-}
 @media only screen and (max-width: 600px) {
-  .footer-topLine{
+  .footer-topLine {
     display: flex;
     flex-direction: column;
   }
   .cards {
     margin: 2rem;
-}
+  }
 }
 
 /* --------------- End of media queries ----------------- */
