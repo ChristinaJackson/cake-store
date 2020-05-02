@@ -17,6 +17,7 @@ body {
 }
 
 main {
+  /* I wonder if we need main at all */
 }
 
 /* --------------- Navbar ---------------- */
@@ -45,35 +46,6 @@ a:hover {
   color: var(--mainRed);
 }
 
-.cards {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  margin: 2rem auto;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: auto;
-  gap: 1.5rem;
-}
-
-.itemImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-
-.itemName {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  padding: 1rem;
-  color: black;
-  background-color: var(--mainGrey);
-  border-radius: 0 0 20px 20px;
-}
-
 nav ul {
   display: flex;
   flex-direction: row;
@@ -96,14 +68,14 @@ nav li {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: var(--primaryColor);
+  background: var(--mainRed);
   padding: 0 5px;
   border-radius: 50%;
-  color: var(--mainRed);
+  color: var(--mainGrey);
   font-size: 1.1rem;
 }
 
-/* --------------- Hamburger menu ---------------- */
+/* ----Hamburger menu ----- */
 .fas.fa-bars {
   color: var(--mainGreen);
 }
@@ -157,6 +129,44 @@ nav li {
 
 /* --------------- End of Hamburger menu ---------------- */
 /* --------------- End of Navbar ---------------- */
+/* --------------- Hero ---------------- */
+#hero img{
+  height: 100%;
+  width: 100%;
+}
+
+/* --------------- Cards ---------------- */
+.cards {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: 2rem auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+}
+
+.itemImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.itemName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 1rem;
+  color: black;
+  background-color: var(--mainGrey);
+  border-radius: 0 0 20px 20px;
+}
+
+/* --------------- End of Cards ---------------- */
+
 /* --------------- Start of Footer ---------------- */
 footer {
   padding: 1rem 1rem 0 1rem;
