@@ -5,6 +5,8 @@
   --mainBlue: #8ec1c5;
   --mainGreen: #93c572;
   --mainRed: #df5e74;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
 }
 * {
   margin: 0;
@@ -48,10 +50,8 @@ a:hover {
 
 nav ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
-  margin: 0;
 }
 
 nav li {
@@ -61,7 +61,6 @@ nav li {
 .cart-btn {
   position: relative;
   cursor: pointer;
-  color: var(--mainGreen);
 }
 
 .cart-items {
@@ -80,12 +79,6 @@ nav li {
   color: var(--mainGreen);
 }
 
-/* wrapper */
-#hamnav {
-  width: 100%;
-  top: 0;
-}
-
 /* Hide Hamburger */
 #hamnav label, #hamburger {
   display: none;
@@ -98,7 +91,9 @@ nav li {
 
 #hamitems li a {
   padding: 10px;
+  
 }
+
 
 @media screen and (max-width: 768px) {
   /* Show hamburger icon */
@@ -126,15 +121,48 @@ nav li {
     display: block;
   }
 }
-
 /* --------------- End of Hamburger menu ---------------- */
 /* --------------- End of Navbar ---------------- */
 /* --------------- Hero ---------------- */
-#hero img{
-  height: 100%;
-  width: 100%;
+.hero {
+  min-height: 100vh;
+  background: url('../images/2.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 2rem;
+}
+
+.banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+
+.banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--mainGreen);
+  border: 1px solid var(--mainGreen);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+.banner-btn:hover {
+  background: transparent;
+  color: var(--mainGreen);
+}
+/* --------------- End of Hero ---------------- */
 /* --------------- Cards ---------------- */
 .cards {
   font-family: "Montserrat", sans-serif;
