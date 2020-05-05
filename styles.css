@@ -1,0 +1,171 @@
+/* --------------- Variables ---------------- */
+:root {
+  --primaryColor: #e3e5b3;
+  --mainGrey: #eaeef4;
+  --mainBlue: #8ec1c5;
+  --mainGreen: #93c572;
+  --mainRed: #df5e74;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --------------- Main styles ---------------- */
+body {
+  font-family: "Cormorant SC", "Lucida Sans", "Verdana", serif;
+}
+
+main {
+}
+
+/* --------------- Navbar ---------------- */
+header{
+  position: sticky;
+  top: 0;
+}
+nav {
+  background: var(--mainGrey);
+  font-size: 1.5rem;
+  padding: 1rem;
+
+}
+
+#logo {
+  height: 5rem;
+  width: 8rem;
+}
+
+a {
+  color: var(--mainGreen);
+  text-decoration: none;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.nav-icon:hover,
+a:hover {
+  color: var(--mainRed);
+}
+section .introImage{
+  height: 600px;
+  width: 600px;
+  /* background-image: url("./resources/images/2.jpg");
+  background-repeat: none;
+   */
+}
+.cards {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 2rem auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+}
+
+.itemImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.itemName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 1rem;
+  color: black;
+  background-color: var(--mainGrey);
+  border-radius: 0 0 20px 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  margin: auto;
+}
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+  color: var(--mainGreen);
+}
+
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 50%;
+  color: var(--mainRed);
+  font-size: 1.1rem;
+}
+/* --------------- End of Navbar ---------------- */
+/* --------------- Start of Footer ---------------- */
+footer{
+  padding: 1rem 1rem 0 1rem;
+  background-color: var(--mainGreen);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.footer-nav li:not(:first-child){
+  border-left:1px solid #000;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.social-icons{
+  display: inline-flex;
+  justify-content: space-around;
+}
+.social-icons i {
+  margin: 0.5rem;
+}
+.footer-topLine{
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright{
+  font-size: 0.7rem;
+}
+/* --------------- End of Footer ---------------- */
+
+
+
+/* --------------- media queries ----------------- */
+@media screen and (min-width: 768px) {
+
+}
+@media only screen and (max-width: 600px) {
+  .footer-topLine{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    margin: 2rem;
+}
+}
+
+/* --------------- End of media queries ----------------- */
