@@ -19,6 +19,7 @@ body {
 main {
 }
 
+
 /* --------------- Navbar ---------------- */
 header{
   position: sticky;
@@ -29,6 +30,12 @@ nav {
   font-size: 1.5rem;
   padding: 1rem;
 
+}
+.navbar ul {
+  display: flex;
+ flex-direction: column;
+ width: 100%;
+ justify-content: space-around;
 }
 
 #logo {
@@ -116,7 +123,8 @@ nav li {
 /* --------------- End of Navbar ---------------- */
 /* --------------- Start of Footer ---------------- */
 footer{
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  font-size: 1rem;
   background-color: var(--mainGreen);
   color: black;
   display: flex;
@@ -133,7 +141,13 @@ footer{
   margin-left: 0.5rem;
   padding-left: 0.5rem;
 }
-
+.footer-link{
+  color: black;
+}
+.footer-link:hover{
+  text-decoration: underline;
+  color: black;
+}
 .social-icons{
   display: inline-flex;
   justify-content: space-around;
