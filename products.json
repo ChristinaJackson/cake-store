@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "cupcakes",
+        "price": 5.50,
+        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "parfait",
+        "price": 7.50,
+        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "coffee",
+        "price": 3.00,
+        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "assorted pastries",
+        "price": 10.00,
+        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "red velvet cupcake",
+        "price": 12.50,
+        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "chocolate cake",
+        "price": 12.00,
+        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "hot chocolate",
+        "price": 2.50,
+        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "cheese cake",
+        "price": 7.00,
+        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
+      }
+    }
+  ]
+}
