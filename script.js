@@ -10,7 +10,7 @@ const cartOverlay = document.querySelector('.cart-overlay');
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
-const productsDOM = document.querySelector('.products-center');
+const productsDOM = document.querySelector('.cards');
 // cart
 let cart = [];
 
@@ -41,9 +41,20 @@ class UI {
     let result = '';
     products.forEach(product => {
       result += `
-      
-      `
-    })
+      <div class="card">
+            <img
+              class="itemImage"
+              src=${product.image}
+              alt=""
+            />
+            <div class="itemName">
+              <p>${product.title}</p>
+              <p>$${product.price}</p>
+            </div>
+      </div>
+      `;
+    });
+    productsDOM.innerHTML = result; 
   }
 }
 
