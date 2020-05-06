@@ -58,40 +58,13 @@ a {
 a:hover {
   color: var(--mainRed);
 }
+
 section .introImage{
   height: 600px;
   width: 600px;
   /* background-image: url("./resources/images/2.jpg");
   background-repeat: none;
    */
-}
-.cards {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  margin: 2rem auto;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: auto;
-  gap: 1.5rem;
-}
-
-.itemImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-
-.itemName {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  padding: 1rem;
-  color: black;
-  background-color: var(--mainGrey);
-  border-radius: 0 0 20px 20px;
 }
 
 nav ul {
@@ -133,8 +106,8 @@ nav li {
   transition: var(--mainTransition);
   background: rgb(240, 157, 81, 0.5);
   z-index: 2;
-  /* comment to show cart */
-  /* visibility: hidden;  */
+  /* comment to show cart's sliding page */
+  visibility: hidden; 
 }
 
 .cart {
@@ -148,8 +121,8 @@ nav li {
   background: rgb(231, 226, 221);
   padding: 1.5rem;
   transition: var(--mainTransition);
-  /* comment to show cart */
-  /* transform: translateX(100%);  */
+  /* comment to show cart's sliding page */
+  transform: translateX(100%); 
 }
 
 .showCart {
@@ -218,6 +191,83 @@ nav li {
   cursor: pointer;
 }
 /* --------------- End of Cart Item ---------------- */
+/* --------------- Cards ---------------- */
+.cards {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 2rem auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+  text-transform: capitalize;
+}
+
+.itemImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.itemName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 1rem;
+  color: black;
+  background-color: var(--mainGrey);
+  border-radius: 0 0 20px 20px;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: var(--mainGreen);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.bag-btn:hover {
+  color: var(--mainWhite);
+}
+
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+
+.itemImage {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+
+.img-container:hover .itemImage {
+  opacity: 0.5;
+}
+/* --------------- End of Cards ---------------- */
+
+
 .cart-footer {
   margin-top: 2rem;
   letter-spacing: var(--mainSpacing);
