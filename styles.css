@@ -121,6 +121,35 @@ nav li {
   font-size: 1.1rem;
 }
 /* --------------- End of Navbar ---------------- */
+/* --------------- Start of Sort Buttons ---------------- */
+#sort-section h2{
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+#sort-buttons{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 80vh;
+  margin: 2rem auto 3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+
+#sort-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--mainGreen);
+  border: solid 1px var(--mainGreen);
+}
+#sort-buttons button:active{
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 2px 0px rgba(59,59,56,1);
+}
+/* --------------- End of Sort Buttons ---------------- */
+
+
 /* --------------- Start of Footer ---------------- */
 footer{
   padding: 1rem;
