@@ -8,6 +8,7 @@
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -30,19 +31,13 @@ nav {
   font-size: 1.5rem;
   padding: 1rem;
 }
+
 .navbar ul {
-  display: flex;
+ display: flex;
  flex-direction: column;
  width: 100%;
  justify-content: space-around;
 }
-
-.navbar ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-around;
- }
 
 #logo {
   height: 5rem;
@@ -74,11 +69,12 @@ nav ul {
 nav li {
   margin: auto;
 }
+
 .cart-btn {
   position: relative;
   cursor: pointer;
-  color: var(--mainGreen);
 }
+
 .cart-items {
   position: absolute;
   top: -8px;
@@ -108,7 +104,6 @@ nav li {
 
 #hamitems li a {
   padding: 10px;
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -136,13 +131,14 @@ nav li {
   #hamnav input:checked ~ #hamitems {
     display: block;
   }
+
   .footer-topLine{
     display: flex;
     flex-direction: column;
   }
   .cards {
     margin: 2rem;
-}
+  }
 }
 /* --------------- End of Hamburger menu ---------------- */
 /* --------------- End of Navbar ---------------- */
@@ -254,7 +250,6 @@ nav li {
 }
 /* --------------- End of Cart Item ---------------- */
 /* --------------- Hero ---------------- */
-}
 .hero {
   min-height: 100vh;
   background: url('../images/2.jpg') center/cover no-repeat;
@@ -323,8 +318,6 @@ nav li {
   box-shadow: 2px 2px 2px 0px rgba(59,59,56,1);
 }
 /* --------------- End of Sort Buttons ---------------- */
-
-
 /* --------------- Cards ---------------- */
 .cards {
   font-family: "Montserrat", sans-serif;
