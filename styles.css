@@ -163,6 +163,7 @@ nav li {
 .cart-item img {
   width: 75px;
   height: 75px;
+  border-radius: 12px;
 }
 
 .cart-item h4 {
@@ -178,6 +179,7 @@ nav li {
 
 .item-amount {
   text-align: center;
+  font-weight: 700;
 }
 
 .remove-item {
@@ -189,6 +191,17 @@ nav li {
 .fa-chevron-down {
   color: var(--mainGreen);
   cursor: pointer;
+}
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 /* --------------- End of Cart Item ---------------- */
 /* --------------- Cards ---------------- */
@@ -266,19 +279,6 @@ nav li {
   opacity: 0.5;
 }
 /* --------------- End of Cards ---------------- */
-
-
-.cart-footer {
-  margin-top: 2rem;
-  letter-spacing: var(--mainSpacing);
-  text-align: center;
-}
-
-.cart-footer h3 {
-  text-transform: capitalize;
-  margin-bottom: 1rem;
-}
-
 /* --------------- Start of Footer ---------------- */
 footer{
   padding: 1rem;
