@@ -70,20 +70,7 @@ nav li {
   cursor: pointer;
   color: var(--mainGreen);
 }
-/* There were two cart item classes with the colors different.
- Didn't know which you wanted to keep */
 .cart-items {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: var(--mainRed);
-  padding: 0 5px;
-  border-radius: 50%;
-  color: var(--mainGrey);
-  font-size: 1.1rem;
-}
-
-/* .cart-items {
   position: absolute;
   top: -8px;
   right: -8px;
@@ -92,7 +79,7 @@ nav li {
   border-radius: 50%;
   color: var(--mainRed);
   font-size: 1.1rem;
-} */
+}
 
 /* ----Hamburger menu ----- */
 .fas.fa-bars {
