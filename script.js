@@ -1,3 +1,6 @@
+// When I wrote this, only God and I understood what I was doing.
+// Well, now God only knows.
+
 // variables
 const cartBtn = document.querySelector(".cart-btn");
 const closeCartBtn = document.querySelector(".close-cart");
@@ -229,5 +232,3 @@ ui.setupAPP();
     });
 });
 
-// When I wrote this, only God and I understood what I was doing.
-// Now, God only knows.
