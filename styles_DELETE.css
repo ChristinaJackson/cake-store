@@ -8,6 +8,7 @@
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,23 +19,20 @@ body {
   font-family: "Cormorant SC", "Lucida Sans", "Verdana", serif;
 }
 
-main {
-}
-
-
 /* --------------- Navbar ---------------- */
 header{
   position: sticky;
   top: 0;
 }
+
 nav {
   background: var(--mainGrey);
   font-size: 1.5rem;
   padding: 1rem;
-
 }
+
 .navbar ul {
-  display: flex;
+ display: flex;
  flex-direction: column;
  width: 100%;
  justify-content: space-around;
@@ -59,7 +57,7 @@ a:hover {
   color: var(--mainRed);
 }
 
-section .introImage{
+section .introImage {
   height: 600px;
   width: 600px;
   /* background-image: url("./resources/images/2.jpg");
@@ -106,7 +104,6 @@ nav li {
   transition: var(--mainTransition);
   background: rgb(240, 157, 81, 0.5);
   z-index: 2;
-  /* comment to show cart's sliding page */
   visibility: hidden; 
 }
 
@@ -121,7 +118,6 @@ nav li {
   background: rgb(231, 226, 221);
   padding: 1.5rem;
   transition: var(--mainTransition);
-  /* comment to show cart's sliding page */
   transform: translateX(100%); 
 }
 
@@ -289,55 +285,58 @@ footer{
   flex-direction: column;
   align-items: center;
 }
+
 .footer-nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
-.footer-nav li:not(:first-child){
+
+.footer-nav li:not(:first-child) {
   border-left:1px solid #000;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
 }
-.footer-link{
+
+.footer-link {
   color: black;
 }
-.footer-link:hover{
+
+.footer-link:hover {
   text-decoration: underline;
   color: black;
 }
-.social-icons{
+
+.social-icons {
   display: inline-flex;
   justify-content: space-around;
 }
+
 .social-icons i {
   margin: 0.5rem;
 }
-.footer-topLine{
+
+.footer-topLine {
   width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.copyright{
+
+.copyright {
   font-size: 0.7rem;
 }
 /* --------------- End of Footer ---------------- */
-
-
-
 /* --------------- media queries ----------------- */
-@media screen and (min-width: 768px) {
-
-}
 @media only screen and (max-width: 600px) {
-  .footer-topLine{
+  .footer-topLine {
     display: flex;
     flex-direction: column;
   }
+  
   .cards {
     margin: 2rem;
-}
+  }
 }
 
 /* --------------- End of media queries ----------------- */
