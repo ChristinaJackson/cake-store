@@ -30,6 +30,12 @@ nav {
   font-size: 1.5rem;
   padding: 1rem;
 }
+.navbar ul {
+  display: flex;
+ flex-direction: column;
+ width: 100%;
+ justify-content: space-around;
+}
 
 .navbar ul {
   display: flex;
@@ -68,12 +74,11 @@ nav ul {
 nav li {
   margin: auto;
 }
-
 .cart-btn {
   position: relative;
   cursor: pointer;
+  color: var(--mainGreen);
 }
-
 .cart-items {
   position: absolute;
   top: -8px;
@@ -131,6 +136,13 @@ nav li {
   #hamnav input:checked ~ #hamitems {
     display: block;
   }
+  .footer-topLine{
+    display: flex;
+    flex-direction: column;
+  }
+  .cards {
+    margin: 2rem;
+}
 }
 /* --------------- End of Hamburger menu ---------------- */
 /* --------------- End of Navbar ---------------- */
@@ -242,6 +254,7 @@ nav li {
 }
 /* --------------- End of Cart Item ---------------- */
 /* --------------- Hero ---------------- */
+}
 .hero {
   min-height: 100vh;
   background: url('../images/2.jpg') center/cover no-repeat;
@@ -283,6 +296,35 @@ nav li {
   color: var(--mainGreen);
 }
 /* --------------- End of Hero ---------------- */
+/* --------------- Start of Sort Buttons ---------------- */
+#sort-section h2{
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+#sort-buttons{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 80vh;
+  margin: 2rem auto 3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+
+#sort-buttons button {
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  background-color: var(--mainGreen);
+  border: solid 1px var(--mainGreen);
+}
+#sort-buttons button:active{
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 2px 0px rgba(59,59,56,1);
+}
+/* --------------- End of Sort Buttons ---------------- */
+
+
 /* --------------- Cards ---------------- */
 .cards {
   font-family: "Montserrat", sans-serif;
