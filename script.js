@@ -78,7 +78,11 @@ class UI{
           filteredProducts.push(product)
         }
       })
-      this.displayProducts(filteredProducts)}
+      this.displayProducts(filteredProducts)
+    }
+    //add the cart buttons/logic to  products after filtering
+    this.getBagButtons();
+    this.cartLogic();
   }
 
   getBagButtons() {
