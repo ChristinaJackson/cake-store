@@ -42,7 +42,6 @@ class UI{
   displayProducts(products) {
     let result ='';
     products.forEach((product) => {
-      // console.log('hello')
       result += `
       <div class="card">
         <div class="img-container ${product.type}">  
@@ -198,7 +197,6 @@ class UI{
   clearCart() {
     let cartItems = cart.map(item => item.id);
     cartItems.forEach(id => this.removeItem(id));
-    console.log(cartContent.children);
     while (cartContent.children.length > 0) {
       cartContent.removeChild(cartContent.children[0])
     }
