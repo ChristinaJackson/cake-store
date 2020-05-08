@@ -79,13 +79,13 @@ nav li {
 .cart-items {
   position: absolute;
   top: -8px;
-  right: -8px;
-  background: var(--primaryColor);
+  right: -1px;
+  background: #ff0000;
   padding: 0 5px;
   border-radius: 50%;
-  color: var(--mainRed);
-  font-size: 1.1rem;
-  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Veranda";   
 }
 
 /* ----Hamburger menu ----- */
