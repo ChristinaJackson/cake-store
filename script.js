@@ -77,11 +77,7 @@ class UI{
           filteredProducts.push(product)
         }
       })
-      this.displayProducts(filteredProducts)
-    }
-    //add the cart buttons/logic to  products after filtering
-    this.getBagButtons();
-    this.cartLogic();
+      this.displayProducts(filteredProducts)}
   }
 
   getBagButtons() {
@@ -263,4 +259,3 @@ function sortProductByType(ui, products) {
     }
   });
 }
-
