@@ -433,6 +433,14 @@ footer{
 
 .social-icons i {
   margin: 0.5rem;
+  color: black;
+}
+
+.social-icons a:hover {
+  border-radius: 7px;
+  background: #93c572;
+  box-shadow: inset -13px -13px 25px #577443, 
+              inset 13px 13px 25px #cfffa1;
 }
 
 .footer-topLine {
