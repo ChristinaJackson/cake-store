@@ -271,6 +271,7 @@ toggle.addEventListener('click', ()=>{
   const cartButton = document.getElementsByClassName("cart-footer");
   const cartItems = document.getElementsByClassName('cart-item');
   const bagButtons = document.getElementsByClassName('bag-btn');
+  const upButton = document.getElementById('myBtn');
   //.classList.toggle -> adds/removes the access-mode class on click
     for(let i=0; i < cartItems.length; i++){
       cartItems[i].classList.toggle('access-mode')
@@ -282,6 +283,8 @@ toggle.addEventListener('click', ()=>{
   bannerButton[0].classList.toggle('access-mode');
   cartButton[0].classList.toggle('access-mode');
   sortSection.classList.toggle('access-mode');
+  console.log(upButton)
+  upButton.classList.toggle('access-mode');
   footer[0].classList.toggle('access-mode');
 });
 

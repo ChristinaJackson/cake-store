@@ -538,6 +538,8 @@ footer.access-mode, footer.access-mode a{
   background-color: var(--accessibleGreen);
   color: var(--mainWhite)
 }
-=======
+a.access-mode i{
+  color: var(--accessibleGreen)
+}
 /* --------------- End of access-mode ----------------- */
 
