@@ -86,6 +86,11 @@ nav li {
   padding: 0 5px;
   border-radius: 50%;
   color: var(--mainWhite);
+/*   decide what styling to use */
+/*   background: #ff0000;
+  padding: 0 5px;
+  border-radius: 50%;
+  color: #fff; */
   font-size: 1rem;
   font-family: "Veranda";   
 }
@@ -127,8 +132,14 @@ nav li {
   }
 
   /* Toggle Show/Hide Menu */
-  #hamitems, .cart-btn, #logo {
+  #hamitems, #logo {
     display: none;
+  }
+
+  .cart-items {
+    top: 3px;
+    right: auto;
+    left: 29px;
   }
 
   #hamnav input:checked ~ #hamitems {
@@ -327,7 +338,7 @@ nav li {
 .cards {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  margin: 2rem auto;
+  margin: 4rem auto;
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -438,6 +449,14 @@ footer{
 
 .social-icons i {
   margin: 0.5rem;
+  color: black;
+}
+
+.social-icons a:hover {
+  border-radius: 7px;
+  background: #93c572;
+  box-shadow: inset -13px -13px 25px #577443, 
+              inset 13px 13px 25px #cfffa1;
 }
 
 .footer-topLine {
@@ -460,6 +479,19 @@ footer{
   
   .cards {
     margin: 2rem;
+  }
+ 
+}
+@media only screen and (max-width: 900px) {
+  #sort-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+  }
+  #sort-buttons button{
+    padding: 5px;
+    margin: 0.5rem;
   }
 }
 
@@ -492,3 +524,6 @@ footer.access-mode, footer.access-mode a{
   background-color: var(--accessibleGreen);
   color: var(--mainWhite)
 }
+=======
+/* --------------- End of access-mode ----------------- */
+

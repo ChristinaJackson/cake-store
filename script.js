@@ -26,10 +26,10 @@ class Products {
 
       let products = data.items;
       products = products.map((item) => {
-        const { title, price } = item.fields;
+        const { title, type, price } = item.fields;
         const { id } = item.sys;
         const image = item.fields.image.fields.file.url;
-        return { title, price, id, image };
+        return { title, type, price, id, image };
       });
       return products;
     } catch (error) {
@@ -38,17 +38,17 @@ class Products {
   }
 }
 // display products
-class UI {
+class UI{
   displayProducts(products) {
-    let result = "";
+    let result ='';
     products.forEach((product) => {
       result += `
       <div class="card">
-        <div class="img-container">  
+        <div class="img-container ${product.type}">  
           <img
             class="itemImage"
             src=${product.image}
-            alt=""
+            alt="${product.title}"
           />
            <button class="bag-btn" data-id=${product.id}>
             <i class="fas fa-shopping-cart"></i>
@@ -63,6 +63,21 @@ class UI {
       `;
     });
     productsDOM.innerHTML = result;
+  }
+//values from the sortProductByType function/event listener
+  filterItems(sortType,products){
+    if (sortType === "view all"){
+      this.displayProducts(products)
+    }else {
+      //initialize an array to store the filtered item objects
+      let filteredProducts=[];
+      //filtering products that match the product.type
+      products.forEach((product)=> {
+        if (product.type === sortType){
+          filteredProducts.push(product)
+        }
+      })
+      this.displayProducts(filteredProducts)}
   }
 
   getBagButtons() {
@@ -119,7 +134,7 @@ class UI {
       <p class="item-amount">${item.amount}</p>
       <i class="fas fa-chevron-down" <span class="remove-item" data-id=${item.id}></span></i>
     </div>`;
-    cartContent.appendChild(div);    
+    cartContent.appendChild(div);
   }
   showCart() {
     cartOverlay.classList.add('transparentBcg');
@@ -127,7 +142,7 @@ class UI {
   }
   setupAPP() {
     cart = Storage.getCart();
-    this.setCartValues(cart); 
+    this.setCartValues(cart);
     this.populateCart(cart);
     cartBtn.addEventListener('click', this.showCart);
     closeCartBtn.addEventListener('click', this.hideCart);
@@ -146,12 +161,12 @@ class UI {
     });
     // cart functionality
     cartContent.addEventListener('click', event => {
-      if(event.target.classList.contains('remove-item')) {
+      if (event.target.classList.contains('remove-item')) {
         let removeItem = event.target;
         let id = removeItem.dataset.id;
         cartContent.removeChild(removeItem.parentElement.parentElement);
         this.removeItem(id);
-      } else if(event.target.classList.contains('fa-chevron-up')) {
+      } else if (event.target.classList.contains('fa-chevron-up')) {
         let addAmount = event.target;
         let id = addAmount.dataset.id;
         let tempItem = cart.find(item => item.id === id);
@@ -159,12 +174,12 @@ class UI {
         Storage.saveCart(cart);
         this.setCartValues(cart);
         addAmount.nextElementSibling.innerText = tempItem.amount;
-      } else if(event.target.classList.contains("fa-chevron-down")) {
+      } else if (event.target.classList.contains("fa-chevron-down")) {
         let lowerAmount = event.target;
         let id = lowerAmount.dataset.id;
         let tempItem = cart.find(item => item.id === id);
         tempItem.amount = tempItem.amount - 1;
-        if(tempItem.amount > 0) {
+        if (tempItem.amount > 0) {
           Storage.saveCart(cart);
           this.setCartValues(cart);
           lowerAmount.previousElementSibling.innerText = tempItem.amount;
@@ -173,19 +188,18 @@ class UI {
           this.removeItem(id);
         }
       }
-    }); 
+    });
   }
   clearCart() {
     let cartItems = cart.map(item => item.id);
     cartItems.forEach(id => this.removeItem(id));
-    console.log(cartContent.children);
-    while(cartContent.children.length > 0) {
-    cartContent.removeChild(cartContent.children[0])
+    while (cartContent.children.length > 0) {
+      cartContent.removeChild(cartContent.children[0])
     }
     this.hideCart();
   }
   removeItem(id) {
-    cart = cart.filter(item => item.id !==id);
+    cart = cart.filter(item => item.id !== id);
     this.setCartValues(cart);
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
@@ -217,20 +231,33 @@ class Storage {
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
-// setup app 
-ui.setupAPP();
+  // setup app 
+  ui.setupAPP();
   // get all products
   products
     .getProducts()
     .then((products) => {
       ui.displayProducts(products);
       Storage.saveProducts(products);
+      //linking to the sorting function here, passing through the products and ui to link
+      sortProductByType(ui,products);
     })
     .then(() => {
       ui.getBagButtons();
       ui.cartLogic();
     });
 });
+//event delegation - adding the event listener on the entire section
+function sortProductByType(ui, products) {
+  let buttonList = document.getElementById('sort-section');
+  buttonList.addEventListener('click', (e) => {
+    //only listening for clicks on buttons in sort-section
+    if (e.target.tagName === "BUTTON") {
+      const sortType = e.target.innerText.toLowerCase();
+      ui.filterItems(sortType,products)
+    }
+  });
+}
 
 //----------------accessibility mode code-------------------//
 let toggle = document.getElementById("access-button");
@@ -257,3 +284,4 @@ toggle.addEventListener('click', ()=>{
   sortSection.classList.toggle('access-mode');
   footer[0].classList.toggle('access-mode');
 });
+
