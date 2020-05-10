@@ -125,8 +125,14 @@ nav li {
   }
 
   /* Toggle Show/Hide Menu */
-  #hamitems, .cart-btn, #logo {
+  #hamitems, #logo {
     display: none;
+  }
+
+  .cart-items {
+    top: 3px;
+    right: auto;
+    left: 29px;
   }
 
   #hamnav input:checked ~ #hamitems {
