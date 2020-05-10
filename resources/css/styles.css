@@ -476,12 +476,19 @@ nav.navbar.access-mode a{
   color: var(--mainWhite);
 }
 
-.banner-btn.access-mode{
+.banner-btn.access-mode, .cart-footer.access-mode button{
   background-color: var(--accessibleGreen);
   border-color: var(--accessibleGreen);
   color: var(--mainWhite);
 }
 footer.access-mode, footer.access-mode a{
   background-color: var(--accessibleGreen);
-  color: black;
+  color: var(--mainWhite);
+}
+.cart-item.access-mode i{
+ color: var(--accessibleGreen)
+}
+.bag-btn.access-mode  {
+  background-color: var(--accessibleGreen);
+  color: var(--mainWhite)
 }
