@@ -232,3 +232,18 @@ ui.setupAPP();
     });
 });
 
+//----------------accessibility mode code-------------------//
+let toggle = document.getElementById("access-button");
+toggle.addEventListener('click', ()=>{
+  //elements to be toggled on applying the accessibility mode
+  const navbar = document.getElementsByClassName('navbar');
+  const bannerButton = document.getElementsByClassName('banner-btn');
+  const sortSection = document.getElementById('sort-section');
+  const footer = document.getElementsByTagName("FOOTER");
+  //.classList.toggle adds/removes the class on click
+  navbar[0].classList.toggle('access-mode');
+  bannerButton[0].classList.toggle('access-mode');
+  sortSection.classList.toggle('access-mode');
+  footer[0].classList.toggle('access-mode');
+
+})

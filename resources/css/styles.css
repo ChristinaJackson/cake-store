@@ -4,8 +4,9 @@
   --mainGrey: #eaeef4;
   --mainWhite: #ffffff;
   --mainBlue: #8ec1c5;
-  --mainGreen: #48772C;
+  --mainGreen: #93c572;
   --mainRed: #df5e74;
+  --accessibleGreen: #48772C;
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
 }
@@ -315,7 +316,7 @@ nav li {
   border-radius: 10px;
   background-color: var(--mainGreen);
   border: solid 1px var(--mainGreen);
-  color: var(--mainWhite);
+  color: black;
 }
 #sort-buttons button:active{
   transform: translate(1px, 1px);
@@ -403,7 +404,7 @@ footer{
   padding: 1rem;
   font-size: 1rem;
   background-color: var(--mainGreen);
-  color: var(--mainWhite);
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,7 +423,7 @@ footer{
 }
 
 .footer-link {
-  color: var(--mainWhite);
+  color:black;
 }
 
 .footer-link:hover {
@@ -463,3 +464,23 @@ footer{
 }
 
 /* --------------- End of media queries ----------------- */
+
+/* --------------- Start of access-mode ----------------- */
+
+nav.navbar.access-mode a{
+  color: var(--accessibleGreen);
+}
+#sort-section.access-mode button{
+  background-color: var(--accessibleGreen);
+  border-color: var(--accessibleGreen);
+  color: var(--mainWhite);
+}
+
+.banner-btn.access-mode{
+  background-color: var(--accessibleGreen);
+  color: var(--mainWhite);
+}
+footer.access-mode, footer.access-mode a{
+  background-color: var(--accessibleGreen);
+  color: black;
+}
