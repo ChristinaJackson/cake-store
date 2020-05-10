@@ -453,7 +453,8 @@ footer{
 
 .footer-link:hover {
   text-decoration: underline;
-  color: black;
+  /* color: black; */
+
 }
 
 .social-icons {
@@ -540,6 +541,13 @@ footer.access-mode, footer.access-mode a{
 }
 a.access-mode i{
   color: var(--accessibleGreen)
+}
+.social-icons.access-mode a i{
+  color: white;
+
+}.social-icons.access-mode a:hover{
+  all: unset;
+  transform: scale(1.1)
 }
 /* --------------- End of access-mode ----------------- */
 
