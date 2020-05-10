@@ -130,9 +130,9 @@ class UI{
       <span class="remove-item" data-id=${item.id}>remove</span>
     </div>
     <div>
-    <i class="fas fa-chevron-up" <span class="remove-item" data-id=${item.id}></span></i>
-    <p class="item-amount">${item.amount}</p>
-    <i class="fas fa-chevron-down" <span class="remove-item" data-id=${item.id}></span></i>
+      <i class="fas fa-chevron-up" <span class="remove-item" data-id=${item.id}></span></i>
+      <p class="item-amount">${item.amount}</p>
+      <i class="fas fa-chevron-down" <span class="remove-item" data-id=${item.id}></span></i>
     </div>`;
     cartContent.appendChild(div);
   }
@@ -247,7 +247,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.cartLogic();
     });
 });
-
 //event delegation - adding the event listener on the entire section
 function sortProductByType(ui, products) {
   let buttonList = document.getElementById('sort-section');
@@ -259,3 +258,30 @@ function sortProductByType(ui, products) {
     }
   });
 }
+
+//----------------accessibility mode code-------------------//
+let toggle = document.getElementById("access-button");
+
+toggle.addEventListener('click', ()=>{
+  //elements to be toggled on applying the accessibility mode
+  const navbar = document.getElementsByClassName('navbar');
+  const bannerButton = document.getElementsByClassName('banner-btn');
+  const sortSection = document.getElementById('sort-section');
+  const footer = document.getElementsByTagName("FOOTER");
+  const cartButton = document.getElementsByClassName("cart-footer");
+  const cartItems = document.getElementsByClassName('cart-item');
+  const bagButtons = document.getElementsByClassName('bag-btn');
+  //.classList.toggle -> adds/removes the access-mode class on click
+    for(let i=0; i < cartItems.length; i++){
+      cartItems[i].classList.toggle('access-mode')
+    }
+    for(let i=0; i < bagButtons.length; i++){
+      bagButtons[i].classList.toggle('access-mode')
+    }
+  navbar[0].classList.toggle('access-mode');
+  bannerButton[0].classList.toggle('access-mode');
+  cartButton[0].classList.toggle('access-mode');
+  sortSection.classList.toggle('access-mode');
+  footer[0].classList.toggle('access-mode');
+});
+

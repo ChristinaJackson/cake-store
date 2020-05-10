@@ -2,9 +2,11 @@
 :root {
   --primaryColor: #e3e5b3;
   --mainGrey: #eaeef4;
+  --mainWhite: #ffffff;
   --mainBlue: #8ec1c5;
   --mainGreen: #93c572;
   --mainRed: #df5e74;
+  --accessibleGreen: #48772C;
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
 }
@@ -80,10 +82,15 @@ nav li {
   position: absolute;
   top: -8px;
   right: -1px;
-  background: #ff0000;
+  background: red;
   padding: 0 5px;
   border-radius: 50%;
-  color: #fff;
+  color: var(--mainWhite);
+/*   decide what styling to use */
+/*   background: #ff0000;
+  padding: 0 5px;
+  border-radius: 50%;
+  color: #fff; */
   font-size: 1rem;
   font-family: "Veranda";   
 }
@@ -235,7 +242,7 @@ nav li {
 }
 
 .remove-item {
-  color: grey;
+  color: #8A0000;
   cursor: pointer;
 }
 
@@ -291,6 +298,7 @@ nav li {
   transition: var(--mainTransition);
   cursor: pointer;
   border-radius: 10px;
+  color: var(--mainWhite);
 }
 
 .banner-btn:hover {
@@ -311,7 +319,7 @@ nav li {
   margin: 2rem auto 3rem auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 #sort-buttons button {
@@ -319,6 +327,7 @@ nav li {
   border-radius: 10px;
   background-color: var(--mainGreen);
   border: solid 1px var(--mainGreen);
+  color: black;
 }
 #sort-buttons button:active{
   transform: translate(1px, 1px);
@@ -366,6 +375,7 @@ nav li {
   top: 70%;
   right: 0;
   background: var(--mainGreen);
+  color: var(--mainWhite);
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -378,7 +388,7 @@ nav li {
 }
 
 .bag-btn:hover {
-  color: var(--mainWhite);
+  color: black;
 }
 
 .fa-shopping-cart {
@@ -424,7 +434,7 @@ footer{
 }
 
 .footer-link {
-  color: black;
+  color:black;
 }
 
 .footer-link:hover {
@@ -486,3 +496,34 @@ footer{
 }
 
 /* --------------- End of media queries ----------------- */
+
+/* --------------- Start of access-mode ----------------- */
+
+nav.navbar.access-mode a{
+  color: var(--accessibleGreen);
+}
+#sort-section.access-mode button{
+  background-color: var(--accessibleGreen);
+  border-color: var(--accessibleGreen);
+  color: var(--mainWhite);
+}
+
+.banner-btn.access-mode, .cart-footer.access-mode button{
+  background-color: var(--accessibleGreen);
+  border-color: var(--accessibleGreen);
+  color: var(--mainWhite);
+}
+footer.access-mode, footer.access-mode a{
+  background-color: var(--accessibleGreen);
+  color: var(--mainWhite);
+}
+.cart-item.access-mode i{
+ color: var(--accessibleGreen)
+}
+.bag-btn.access-mode  {
+  background-color: var(--accessibleGreen);
+  color: var(--mainWhite)
+}
+=======
+/* --------------- End of access-mode ----------------- */
+
