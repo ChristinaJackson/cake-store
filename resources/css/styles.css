@@ -470,12 +470,12 @@ footer{
   #sort-buttons{
     display: flex;
     flex-wrap: wrap;
-    width: 50vw;
+    width: 90vw;
     justify-content: center;
   }
   #sort-buttons button{
     padding: 5px;
-    margin: 1px;
+    margin: 0.5rem;
   }
 }
 
