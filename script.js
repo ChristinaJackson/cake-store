@@ -285,3 +285,18 @@ toggle.addEventListener('click', ()=>{
   footer[0].classList.toggle('access-mode');
 });
 
+//----------------top button when scroll-------------------//
+// get the button
+let myButton = document.getElementById("myBtn");
+// when the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+      } else {
+        myButton.style.display = "none";
+      }
+}
+//----------------end of top button when scroll-------------------//
