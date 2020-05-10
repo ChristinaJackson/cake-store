@@ -464,6 +464,19 @@ footer{
   .cards {
     margin: 2rem;
   }
+ 
+}
+@media only screen and (max-width: 900px) {
+  #sort-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    justify-content: center;
+  }
+  #sort-buttons button{
+    padding: 5px;
+    margin: 1px;
+  }
 }
 
 /* --------------- End of media queries ----------------- */
