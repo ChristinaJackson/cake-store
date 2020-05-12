@@ -69,15 +69,9 @@ class UI{
     if (sortType === "view all"){
       this.displayProducts(products)
     }else {
-      //initialize an array to store the filtered item objects
-      let filteredProducts=[];
-      //filtering products that match the product.type
-      products.forEach((product)=> {
-        if (product.type === sortType){
-          filteredProducts.push(product)
-        }
-      })
-      this.displayProducts(filteredProducts)}
+      let filteredProducts = products.filter(products => (products.type === sortType))
+      this.displayProducts(filteredProducts)
+    }
   }
 
   getBagButtons() {
@@ -174,7 +168,7 @@ class UI{
         Storage.saveCart(cart);
         this.setCartValues(cart);
         addAmount.nextElementSibling.innerText = tempItem.amount;
-      } else if (event.target.classList.contains("fa-chevron-down")) {
+      }else if (event.target.classList.contains("fa-chevron-down")) {
         let lowerAmount = event.target;
         let id = lowerAmount.dataset.id;
         let tempItem = cart.find(item => item.id === id);
@@ -187,6 +181,11 @@ class UI{
           cartContent.removeChild(lowerAmount.parentElement.parentElement);
           this.removeItem(id);
         }
+      }
+    });
+    cartOverlay.addEventListener('click', (e)=>{
+      if(e.target.classList.contains("transparentBcg")){
+        this.hideCart();
       }
     });
   }
@@ -273,7 +272,6 @@ toggle.addEventListener('click', ()=>{
   const bagButtons = document.getElementsByClassName('bag-btn');
   const upButton = document.getElementById('myBtn');
   const socialIcons = document.getElementsByClassName('social-icons')
-  //.classList.toggle -> adds/removes the access-mode class on click
     for(let i=0; i < cartItems.length; i++){
       cartItems[i].classList.toggle('access-mode')
     }
@@ -305,3 +303,5 @@ function scrollFunction() {
       }
 }
 //----------------end of top button when scroll-------------------//
+
+
