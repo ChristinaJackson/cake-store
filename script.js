@@ -73,7 +73,7 @@ class UI{
       this.displayProducts(filteredProducts)
     }
   }
-
+ 
   getBagButtons() {
     const buttons = [...document.querySelectorAll(".bag-btn")];
     buttonsDOM = buttons;
@@ -97,8 +97,6 @@ class UI{
         this.setCartValues(cart);
         // display cart item
         this.addCartItem(cartItem);
-        // show the cart
-        this.showCart();
       });
     });
   }
