@@ -347,6 +347,10 @@ nav li {
   text-transform: capitalize;
 }
 
+.card:hover {
+  transform: scale(0.98);
+}
+
 .itemImage {
   width: 100%;
   height: 200px;
