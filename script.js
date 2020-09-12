@@ -12,7 +12,7 @@ const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".cards");
 
-// car
+// cart
 let cart = [];
 // buttons
 let buttonsDOM = [];
